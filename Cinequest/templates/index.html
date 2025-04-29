@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🌌 CineQuest - Movie Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌌 CineQuest</h1>
+        <p class="tagline">Find your next cinematic adventure! 🎥✨</p>
+
+        <div class="search-box">
+            <div class="input-container">
+                <input type="text" id="movieInput" list="moviesList" placeholder="Enter a movie title to start your quest...">
+                <span class="clear-btn" id="clearBtn">&times;</span>
+                <datalist id="moviesList">
+                    {% for movie in all_movies %}
+                        <option value="{{ movie }}">
+                    {% endfor %}
+                </datalist>
+            </div>
+            <button id="recommendBtn">Recommend</button>
+        </div>
+
+        <div id="recommendations" class="recommendations"></div>
+    </div>
+
+    <script>
+        const recommendBtn = document.getElementById('recommendBtn');
+        const recommendationsDiv = document.getElementById('recommendations');
+        const clearBtn = document.getElementById('clearBtn');
+        const movieInput = document.getElementById('movieInput');
+
+        recommendBtn.addEventListener('click', () => {
+            const selectedMovie = movieInput.value;
+            if (!selectedMovie) {
+                alert("Please type or select a movie!");
+                return;
+            }
+
+            recommendationsDiv.innerHTML = '<p>🎬 Searching the stars for your next favorite movie...</p>';
+
+            fetch('/recommend', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ movie: selectedMovie })
+            })
+            .then(response => response.json())
+            .then(data => {
+                recommendationsDiv.innerHTML = '';
+                if (data.recommendations.length > 0) {
+                    data.recommendations.forEach(rec => {
+                        const card = document.createElement('div');
+                        card.className = 'card';
+                    
+                        const img = document.createElement('img');
+                        img.alt = rec.title;
+                        img.src = 'data:image/jpeg;base64,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';
+                        img.dataset.src = rec.poster_url; 
+                    
+                        const title = document.createElement('h3');
+                        title.textContent = rec.title;
+                    
+                        card.appendChild(img);
+                        card.appendChild(title);
+                        recommendationsDiv.appendChild(card);
+                    
+                        const realImg = new Image();
+                        realImg.src = rec.poster_url;
+                        realImg.onload = () => {
+                            img.src = rec.poster_url;
+                        };
+                        realImg.onerror = () => {
+                            img.src = 'https://via.placeholder.com/500x750.png?text=No+Poster';
+                        };
+                    });
+                    
+                } else {
+                    recommendationsDiv.innerHTML = '<p>🎭 No matching journeys found. Try a different title!</p>';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                recommendationsDiv.innerHTML = '<p>⚡ Oops! Something disrupted the portal. Please try again later!</p>';
+            });
+        });
+
+        clearBtn.addEventListener('click', () => {
+            movieInput.value = '';
+            movieInput.focus();
+            clearBtn.style.display = 'none';
+        });
+
+        movieInput.addEventListener('input', () => {
+            clearBtn.style.display = movieInput.value.length > 0 ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>
