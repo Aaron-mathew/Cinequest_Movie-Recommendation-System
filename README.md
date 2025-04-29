@@ -132,8 +132,8 @@ numpy
 
 # 🙋‍♂️ Author Info
 
-##👨 Name: Aaron Mathew
-##🎓 Branch: CSE-AIDS
-##🏫 College: L.N.C.T Bhopal
+## 👨 Name: Aaron Mathew
+## 🎓 Branch: CSE-AIDS
+## 🏫 College: L.N.C.T Bhopal
 
 
