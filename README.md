@@ -73,7 +73,7 @@ Run all cells to generate:
     movies.pkl
     similarity.pkl
 
-Move these two files into the root directory (next to app.py).
+Move these two files into the Cinequest directory (next to app.py).
 
 ### 3. Get Your TMDb API Key
 
