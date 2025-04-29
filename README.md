@@ -64,39 +64,42 @@ All model training and vector generation done in `Movie Recommender System.ipynb
 
 ### 2. Generate Required Files
 
-    Open the notebook:
+Open the notebook:
+    
     Backend-notebook/Movie Recommender System.ipynb
 
-    Run all cells to generate:
-        movies.pkl
-        similarity.pkl
+Run all cells to generate:
+    
+    movies.pkl
+    similarity.pkl
 
-    Move these two files into the root directory (next to app.py).
+Move these two files into the root directory (next to app.py).
 
 ### 3. Get Your TMDb API Key
 
-    1.Go to TMDb.
+1.Go to TMDb.
 
-    2.Create a free account and request an API Key.
+2.Create a free account and request an API Key.
 
-    3.Create a .env file in your root and paste:
-        TMDB_API_KEY=your_api_key_here
+3.Create a .env file in your root and paste:
+    
+    TMDB_API_KEY=your_api_key_here
 
-    .env is auto-ignored in .gitignore.
+.env is auto-ignored in .gitignore.
 
 ### 4. Install Requirements
-    Recommended to use a virtual environment.
+Recommended to use a virtual environment.
 
-    # Create virtual environment
+# Create virtual environment
     python -m venv venv
 
-    # Activate
-    # On Windows:
+# Activate
+# On Windows:
     venv\Scripts\activate
-    # On macOS/Linux:
+# On macOS/Linux:
     source venv/bin/activate
 
-    # Install dependencies
+# Install dependencies
     pip install -r requirements.txt
 
 ### 5. Run the App
@@ -122,13 +125,13 @@ Understand practical use of cosine similarity & vectorization
 
 # 📦 Requirements
 
-flask
-pandas
-requests
-python-dotenv
-scikit-learn
-nltk
-numpy
+- flask
+- pandas
+- requests
+- python-dotenv
+- scikit-learn
+- nltk
+- numpy
 
 # 🙋‍♂️ Author Info
 
