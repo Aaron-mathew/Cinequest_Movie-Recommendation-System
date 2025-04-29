@@ -28,10 +28,12 @@ All model training and vector generation done in `Movie Recommender System.ipynb
 # 🖼️ Project Demo
 
 ## 🎥 Home Page
-![Home Page]
+![Home Page]![🌌 CineQuest - Movie Recommender 1](https://github.com/user-attachments/assets/1080b930-6108-404f-9dd0-f9c5915980e0)
+
 
 ## ✅ Movie Recommendations
-![Recommendations]
+![Recommendations]![🌌 CineQuest - Movie Recommender 2](https://github.com/user-attachments/assets/cb0307d4-d79b-436a-b039-b9f19aea6bcb)
+
 
 ---
 
@@ -105,7 +107,8 @@ All model training and vector generation done in `Movie Recommender System.ipynb
 
 # Folder Structure
 
-![Folder Structure]
+![Folder Structure]<img width="311" alt="Folder Structure" src="https://github.com/user-attachments/assets/8585912a-1b74-4713-b696-f328cdb55455" />
+
 
 # 🔑 Insights You’ll Gain
 
@@ -129,8 +132,8 @@ numpy
 
 # 🙋‍♂️ Author Info
 
-👨 Name: Aaron Mathew
-🎓 Branch: CSE-AIDS
-🏫 College: L.N.C.T Bhopal
+##👨 Name: Aaron Mathew
+##🎓 Branch: CSE-AIDS
+##🏫 College: L.N.C.T Bhopal
 
 
