@@ -1,6 +1,6 @@
 # 🌌 CineQuest — Movie Recommendation System 🎬
 
-![cinequest banner]
+[CineQuest Movie Recommendations Banner](https://github.com/user-attachments/assets/896c1231-29ac-4967-9912-2ad406511f33)]
 
 # 🧠 Content-Based Movie Recommender using Flask + TMDb API
 
